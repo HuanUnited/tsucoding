@@ -1,6 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void sortstepup(int *a, int n, int index) {
+  // inserts two arrays (or one), a index number, and a n max size of array
+  // number to sort one number upwards
+  for (int j = index; j < n; j++) {
+    if (a[index] > a[j]) {
+      int temp = a[index];
+      a[index] = a[j];
+      a[j] = temp;
+    }
+  }
+}
+
+void stepsort(int *a, int n) {
+  for (int i = 0; i < n; i++) {
+    for (int j = i; j < n; j++) {
+      if (a[i] > a[j]) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+      }
+    }
+  }
+}
+
 // Function to read two integers from a specified file
 void openInput(const char *inputFilename) {
   FILE *inputFile;
