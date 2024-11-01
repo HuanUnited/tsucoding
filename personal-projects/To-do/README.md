@@ -1,0 +1,1 @@
+this is a to do list program that I'm trying to create in C. I don't really know how i'm supposed to do it but i think it should be fun.
