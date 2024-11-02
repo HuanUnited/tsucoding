@@ -1,5 +1,13 @@
+#include <cstdlib>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+int Randoms(int min, int max) {
+  unsigned int seed = time(0);
+  int rd_num = rand_r(&seed) % (max - min + 1) + min;
+  return rd_num;
+}
 
 void sortstepup(int *a, int n, int index) {
   // inserts two arrays (or one), a index number, and a n max size of array
