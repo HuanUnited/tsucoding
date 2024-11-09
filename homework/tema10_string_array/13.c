@@ -2,7 +2,6 @@
 // несколькими). Найти слово, начинающееся буквой 'a' и оканчивающееся буквой
 // 'z' (если таких слов нет, сообщить об этом).
 
-#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -30,7 +29,7 @@ int main() {
       }
 
       // Check if the word ends with 'z' or 'Z'
-      if (str[i - 1] == 'z' || str[i - 1] == 'Z') {
+      if ((str[start] == 'a' || str[start] == 'A') && (str[i - 1] == 'z' || str[i - 1] == 'Z')) {
         // Print the word if it meets the criteria
         printf("Found word: ");
         for (int j = start; j < i; j++) {
